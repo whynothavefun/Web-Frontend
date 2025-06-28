@@ -9,6 +9,7 @@ import {
 } from '@/lib/mock';
 import {
   TokenInfo,
+  TokenTrading,
   ChartPlaceholder,
   TransactionsTable,
   TopTradersTable,
@@ -92,6 +93,7 @@ const TokenPage: React.FC = () => {
 
         <div className="space-y-6 lg:col-span-1">
           <TokenInfo token={token} />
+          <TokenTrading token={token} />
           <UserMessages messages={messages} />
         </div>
       </div>
