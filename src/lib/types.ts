@@ -9,3 +9,21 @@ export interface Token {
   trend: 'up' | 'down' | 'stable';
   image: string;
 }
+
+export interface Transaction {
+  id: string;
+  accountAddress: string;
+  type: 'buy' | 'sell';
+  price: number;
+  usdc: number;
+  lvr: number;
+  date: string;
+  transactionHash: string;
+}
+
+export interface TopTrader {
+  id: string;
+  accountAddress: string;
+  balance: number;
+  pnl: number;
+}

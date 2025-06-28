@@ -5,3 +5,7 @@ export { default as TokenCard } from './TokenCard';
 export { default as TokenFilters } from './TokenFilters';
 export { default as KingOfTheHill } from './KingOfTheHill';
 export { default as TokensGrid } from './TokensGrid';
+export { default as TokenInfo } from './TokenInfo';
+export { default as TransactionsTable } from './TransactionsTable';
+export { default as TopTradersTable } from './TopTradersTable';
+export { default as ChartPlaceholder } from './ChartPlaceholder';
