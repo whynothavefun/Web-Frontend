@@ -31,7 +31,7 @@ const TransactionsTable: React.FC<TransactionsTableProps> = ({
         </CardTitle>
       </CardHeader>
       <CardContent>
-        <div className="overflow-x-auto">
+        <div className="overflow-hidden">
           <table className="w-full">
             <thead>
               <tr className="border-b border-gray-200">
@@ -58,59 +58,63 @@ const TransactionsTable: React.FC<TransactionsTableProps> = ({
                 </th>
               </tr>
             </thead>
-            <tbody>
-              {transactions.map(transaction => (
-                <tr
-                  key={transaction.id}
-                  className="border-b border-gray-100 hover:bg-gray-50"
-                >
-                  <td className="px-2 py-3 font-mono text-sm text-black">
-                    {formatAddress(transaction.accountAddress)}
-                  </td>
-                  <td className="px-2 py-3">
-                    <div className="flex items-center space-x-1">
-                      {transaction.type === 'buy' ? (
-                        <ArrowUpRight className="h-4 w-4 text-green-500" />
-                      ) : (
-                        <ArrowDownRight className="h-4 w-4 text-red-500" />
-                      )}
-                      <span
-                        className={`text-sm font-medium ${
-                          transaction.type === 'buy'
-                            ? 'text-green-600'
-                            : 'text-red-600'
-                        }`}
-                      >
-                        {transaction.type.toUpperCase()}
-                      </span>
-                    </div>
-                  </td>
-                  <td className="px-2 py-3 text-sm text-black">
-                    {formatPrice(transaction.price)}
-                  </td>
-                  <td className="px-2 py-3 text-sm text-black">
-                    ${transaction.usdc.toLocaleString()}
-                  </td>
-                  <td className="px-2 py-3 text-sm text-black">
-                    {transaction.lvr.toFixed(3)}
-                  </td>
-                  <td className="px-2 py-3 text-sm text-gray-600">
-                    {formatDate(transaction.date)}
-                  </td>
-                  <td className="px-2 py-3 font-mono text-sm text-blue-600">
-                    <a
-                      href={`https://etherscan.io/tx/${transaction.transactionHash}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:underline"
-                    >
-                      {formatHash(transaction.transactionHash)}
-                    </a>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
           </table>
+          <div className="max-h-110 overflow-y-auto">
+            <table className="w-full">
+              <tbody>
+                {transactions.map(transaction => (
+                  <tr
+                    key={transaction.id}
+                    className="border-b border-gray-100 hover:bg-gray-50"
+                  >
+                    <td className="px-2 py-3 font-mono text-sm text-black">
+                      {formatAddress(transaction.accountAddress)}
+                    </td>
+                    <td className="px-2 py-3">
+                      <div className="flex items-center space-x-1">
+                        {transaction.type === 'buy' ? (
+                          <ArrowUpRight className="h-4 w-4 text-green-500" />
+                        ) : (
+                          <ArrowDownRight className="h-4 w-4 text-red-500" />
+                        )}
+                        <span
+                          className={`text-sm font-medium ${
+                            transaction.type === 'buy'
+                              ? 'text-green-600'
+                              : 'text-red-600'
+                          }`}
+                        >
+                          {transaction.type.toUpperCase()}
+                        </span>
+                      </div>
+                    </td>
+                    <td className="px-2 py-3 text-sm text-black">
+                      {formatPrice(transaction.price)}
+                    </td>
+                    <td className="px-2 py-3 text-sm text-black">
+                      ${transaction.usdc.toLocaleString()}
+                    </td>
+                    <td className="px-2 py-3 text-sm text-black">
+                      {transaction.lvr.toFixed(3)}
+                    </td>
+                    <td className="px-2 py-3 text-sm text-gray-600">
+                      {formatDate(transaction.date)}
+                    </td>
+                    <td className="px-2 py-3 font-mono text-sm text-blue-600">
+                      <a
+                        href={`https://etherscan.io/tx/${transaction.transactionHash}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:underline"
+                      >
+                        {formatHash(transaction.transactionHash)}
+                      </a>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </CardContent>
     </Card>
