@@ -27,3 +27,11 @@ export interface TopTrader {
   balance: number;
   pnl: number;
 }
+
+export interface UserMessage {
+  id: string;
+  username: string;
+  avatar: string;
+  message: string;
+  date: string;
+}

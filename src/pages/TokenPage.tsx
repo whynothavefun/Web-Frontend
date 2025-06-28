@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
-import { mockTokens, mockTransactions, mockTopTraders } from '@/lib/mock';
+import {
+  mockTokens,
+  mockTransactions,
+  mockTopTraders,
+  mockUserMessages,
+} from '@/lib/mock';
 import {
   TokenInfo,
   ChartPlaceholder,
   TransactionsTable,
   TopTradersTable,
+  UserMessages,
 } from '@/components';
 import { Button } from '@/components/ui/button';
 
@@ -20,6 +26,7 @@ const TokenPage: React.FC = () => {
   const token = mockTokens.find(t => t.id === tokenId);
   const transactions = mockTransactions[tokenId || ''] || [];
   const traders = mockTopTraders[tokenId || ''] || [];
+  const messages = mockUserMessages[tokenId || ''] || [];
 
   if (!token) {
     return (
@@ -83,8 +90,9 @@ const TokenPage: React.FC = () => {
           </div>
         </div>
 
-        <div className="lg:col-span-1">
+        <div className="space-y-6 lg:col-span-1">
           <TokenInfo token={token} />
+          <UserMessages messages={messages} />
         </div>
       </div>
     </div>

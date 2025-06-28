@@ -9,3 +9,4 @@ export { default as TokenInfo } from './TokenInfo';
 export { default as TransactionsTable } from './TransactionsTable';
 export { default as TopTradersTable } from './TopTradersTable';
 export { default as ChartPlaceholder } from './ChartPlaceholder';
+export { default as UserMessages } from './UserMessages';
