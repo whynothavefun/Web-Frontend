@@ -35,3 +35,19 @@ export interface UserMessage {
   message: string;
   date: string;
 }
+
+export interface TokenFormData {
+  name: string;
+  symbol: string;
+  description: string;
+  website: string;
+  telegram: string;
+  twitter: string;
+  totalSupply: string;
+  initialPrice: string;
+  maxBuy: string;
+  maxWallet: string;
+  buyTax: string;
+  sellTax: string;
+  logo: File | null;
+}
