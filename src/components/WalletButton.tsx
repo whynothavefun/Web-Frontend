@@ -15,7 +15,7 @@ const WalletButton: React.FC = () => {
           className="to-fuchsia-500px-4 bg-linear-to-bl from-violet-500 py-2 text-white transition-colors"
           onClick={() => disconnect()}
         >
-          Отключить: {address?.slice(0, 6)}...{address?.slice(-4)}
+          Disconnect: {address?.slice(0, 6)}...{address?.slice(-4)}
         </Button>
       ) : (
         <ConnectButton.Custom>
@@ -24,7 +24,7 @@ const WalletButton: React.FC = () => {
               className="to-fuchsia-500px-4 bg-linear-to-bl from-violet-500 py-2 text-white transition-colors"
               onClick={openConnectModal}
             >
-              Подключить кошелёк
+              Connect Wallet
             </Button>
           )}
         </ConnectButton.Custom>

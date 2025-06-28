@@ -15,14 +15,14 @@ const App = () => {
       <QueryClientProvider client={queryClient}>
         <RainbowKitProvider initialChain={42161}>
           <BrowserRouter>
-            <div className="min-h-screen p-4 text-white">
+            <div className="min-h-screen bg-white p-4 text-black">
               <Header />
               <main>
                 <Routes>
                   <Route path="/tokens" element={<TokensPage />} />
                   <Route path="/tokens/:tokenId" element={<TokenPage />} />
                   <Route path="/404" element={<NotFound />} />
-                  <Route path="*" element={<Navigate to="/404" replace />} />
+                  <Route path="*" element={<Navigate to="/tokens" replace />} />
                 </Routes>
               </main>
             </div>
