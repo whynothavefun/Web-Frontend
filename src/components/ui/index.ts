@@ -1,13 +1,16 @@
 export { Button } from './button';
-export {  Card,
+export {
+  Card,
   CardHeader,
   CardFooter,
   CardTitle,
   CardAction,
   CardDescription,
-  CardContent } from './card';
-export {  Input } from './input';
-export {   Select,
+  CardContent,
+} from './card';
+export { Input } from './input';
+export {
+  Select,
   SelectContent,
   SelectGroup,
   SelectItem,
@@ -16,5 +19,7 @@ export {   Select,
   SelectScrollUpButton,
   SelectSeparator,
   SelectTrigger,
-  SelectValue } from './select';
+  SelectValue,
+} from './select';
 export { Badge } from './badge';
+export { Progress } from './progress';

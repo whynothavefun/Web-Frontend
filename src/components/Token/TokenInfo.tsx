@@ -1,7 +1,7 @@
 import React from 'react';
 import { TrendingUp, TrendingDown, Minus } from 'lucide-react';
 import { Token } from '@/lib/types';
-import { TokenIcon } from '@/components';
+import { TokenIcon, GraduationProgress } from '@/components';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { formatNumber, formatPrice, getChangeColor } from '@/utils/tokenUtils';
 
@@ -70,6 +70,9 @@ const TokenInfo: React.FC<TokenInfoProps> = ({ token }) => {
             </p>
           </div>
         </div>
+
+        {/* Graduation Progress */}
+        <GraduationProgress token={token} />
       </CardContent>
     </Card>
   );

@@ -8,6 +8,10 @@ export interface Token {
   change24h: number;
   trend: 'up' | 'down' | 'stable';
   image: string;
+  feePot: number;
+  graduationTarget: number;
+  currentRank: number;
+  maxMarketCap: number;
 }
 
 export interface Transaction {

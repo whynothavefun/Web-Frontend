@@ -19,3 +19,31 @@ export const getKingOfTheHill = (tokens: Token[]): Token[] => {
 export const getChangeColor = (change: number): string => {
   return change >= 0 ? 'text-green-500' : 'text-red-500';
 };
+
+// Graduation progress utilities
+export const calculateMarketCapProgress = (token: Token): number => {
+  return Math.min((token.marketCap / token.maxMarketCap) * 100, 100);
+};
+
+export const calculateFeeProgress = (token: Token): number => {
+  return Math.min((token.feePot / token.graduationTarget) * 100, 100);
+};
+
+export const formatFeePot = (feePot: number): string => {
+  return `${(feePot / 1000).toFixed(1)}k HYPE`;
+};
+
+export const getGraduationStatus = (token: Token): string => {
+  const feeProgress = calculateFeeProgress(token);
+  const mcapProgress = calculateMarketCapProgress(token);
+
+  if (feeProgress >= 100 && mcapProgress >= 100) {
+    return 'Ready to Graduate!';
+  } else if (feeProgress >= 80 || mcapProgress >= 80) {
+    return 'Close to Graduation';
+  } else if (feeProgress >= 50 || mcapProgress >= 50) {
+    return 'Making Progress';
+  } else {
+    return 'Early Stage';
+  }
+};

@@ -11,6 +11,10 @@ export const mockTokens: Token[] = [
     change24h: 2.5,
     trend: 'up',
     image: 'https://assets.coingecko.com/coins/images/1/large/bitcoin.png',
+    feePot: 85000,
+    graduationTarget: 100000,
+    currentRank: 1,
+    maxMarketCap: 850000000000,
   },
   {
     id: '2',
@@ -22,6 +26,10 @@ export const mockTokens: Token[] = [
     change24h: -1.2,
     trend: 'down',
     image: 'https://assets.coingecko.com/coins/images/279/large/ethereum.png',
+    feePot: 72000,
+    graduationTarget: 100000,
+    currentRank: 2,
+    maxMarketCap: 850000000000,
   },
   {
     id: '3',
@@ -34,6 +42,10 @@ export const mockTokens: Token[] = [
     trend: 'stable',
     image:
       'https://assets.coingecko.com/coins/images/825/large/bnb-icon2_2x.png',
+    feePot: 65000,
+    graduationTarget: 100000,
+    currentRank: 3,
+    maxMarketCap: 850000000000,
   },
   {
     id: '4',
@@ -45,6 +57,10 @@ export const mockTokens: Token[] = [
     change24h: 5.2,
     trend: 'up',
     image: 'https://assets.coingecko.com/coins/images/4128/large/solana.png',
+    feePot: 58000,
+    graduationTarget: 100000,
+    currentRank: 4,
+    maxMarketCap: 850000000000,
   },
   {
     id: '5',
@@ -56,6 +72,10 @@ export const mockTokens: Token[] = [
     change24h: -2.1,
     trend: 'down',
     image: 'https://assets.coingecko.com/coins/images/975/large/Cardano.png',
+    feePot: 42000,
+    graduationTarget: 100000,
+    currentRank: 5,
+    maxMarketCap: 850000000000,
   },
   {
     id: '6',
@@ -68,6 +88,10 @@ export const mockTokens: Token[] = [
     trend: 'up',
     image:
       'https://assets.coingecko.com/coins/images/12171/large/polkadot_new_logo.png',
+    feePot: 38000,
+    graduationTarget: 100000,
+    currentRank: 6,
+    maxMarketCap: 850000000000,
   },
   {
     id: '7',
@@ -79,6 +103,10 @@ export const mockTokens: Token[] = [
     change24h: -0.5,
     trend: 'stable',
     image: 'https://assets.coingecko.com/coins/images/877/large/chainlink.png',
+    feePot: 32000,
+    graduationTarget: 100000,
+    currentRank: 7,
+    maxMarketCap: 850000000000,
   },
   {
     id: '8',
@@ -90,6 +118,10 @@ export const mockTokens: Token[] = [
     change24h: 3.8,
     trend: 'up',
     image: 'https://assets.coingecko.com/coins/images/4713/large/matic.png',
+    feePot: 28000,
+    graduationTarget: 100000,
+    currentRank: 8,
+    maxMarketCap: 850000000000,
   },
   {
     id: '9',
@@ -102,6 +134,10 @@ export const mockTokens: Token[] = [
     trend: 'up',
     image:
       'https://assets.coingecko.com/coins/images/12559/large/avalanche.png',
+    feePot: 45000,
+    graduationTarget: 100000,
+    currentRank: 9,
+    maxMarketCap: 850000000000,
   },
   {
     id: '10',
@@ -113,6 +149,10 @@ export const mockTokens: Token[] = [
     change24h: -1.8,
     trend: 'down',
     image: 'https://assets.coingecko.com/coins/images/12504/large/uniswap.png',
+    feePot: 22000,
+    graduationTarget: 100000,
+    currentRank: 10,
+    maxMarketCap: 850000000000,
   },
   {
     id: '11',
@@ -124,6 +164,10 @@ export const mockTokens: Token[] = [
     change24h: 0.3,
     trend: 'stable',
     image: 'https://assets.coingecko.com/coins/images/2/large/litecoin.png',
+    feePot: 25000,
+    graduationTarget: 100000,
+    currentRank: 11,
+    maxMarketCap: 850000000000,
   },
   {
     id: '12',
@@ -135,6 +179,10 @@ export const mockTokens: Token[] = [
     change24h: 2.1,
     trend: 'up',
     image: 'https://assets.coingecko.com/coins/images/5/large/dogecoin.png',
+    feePot: 35000,
+    graduationTarget: 100000,
+    currentRank: 12,
+    maxMarketCap: 850000000000,
   },
 ];
 

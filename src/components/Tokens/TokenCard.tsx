@@ -2,7 +2,7 @@ import React from 'react';
 import { TrendingUp, TrendingDown, Minus } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { Token } from '@/lib/types';
-import { TokenIcon } from '@/components';
+import { TokenIcon, GraduationProgress } from '@/components';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { formatNumber, formatPrice, getChangeColor } from '@/utils/tokenUtils';
@@ -114,6 +114,8 @@ const TokenCard: React.FC<TokenCardProps> = ({
             </span>
           </div>
         </div>
+
+        <GraduationProgress token={token} />
       </CardContent>
     </Card>
   );

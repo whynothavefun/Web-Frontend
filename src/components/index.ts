@@ -5,6 +5,7 @@ export { default as TokenCard } from './Tokens/TokenCard';
 export { default as TokenFilters } from './Tokens/TokenFilters';
 export { default as KingOfTheHill } from './Tokens/KingOfTheHill';
 export { default as TokensGrid } from './Tokens/TokensGrid';
+export { default as GraduationProgress } from './Tokens/GraduationProgress';
 export { default as TokenInfo } from './Token/TokenInfo';
 export { default as TransactionsTable } from './Token/TransactionsTable';
 export { default as TopTradersTable } from './Token/TopTradersTable';
