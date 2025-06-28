@@ -1,5 +1,6 @@
 import React from 'react';
 import { TrendingUp, TrendingDown, Minus } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { Token } from '@/lib/types';
 import { TokenIcon } from '@/components';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -12,6 +13,8 @@ interface TokenCardProps {
 }
 
 const TokenCard: React.FC<TokenCardProps> = ({ token, isKing = false }) => {
+  const navigate = useNavigate();
+
   const getTrendIcon = (trend: 'up' | 'down' | 'stable') => {
     switch (trend) {
       case 'up':
@@ -23,13 +26,18 @@ const TokenCard: React.FC<TokenCardProps> = ({ token, isKing = false }) => {
     }
   };
 
+  const handleCardClick = () => {
+    navigate(`/tokens/${token.id}`);
+  };
+
   return (
     <Card
-      className={`transition-all duration-300 hover:scale-105 ${
+      className={`cursor-pointer transition-all duration-300 hover:scale-105 ${
         isKing
           ? 'border-yellow-500 shadow-lg shadow-yellow-500/20'
           : 'hover:border-blue-500'
       }`}
+      onClick={handleCardClick}
     >
       <CardHeader className="pb-4">
         <div className="flex items-center justify-between">
