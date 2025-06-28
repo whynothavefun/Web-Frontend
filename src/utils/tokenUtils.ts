@@ -12,10 +12,8 @@ export const formatPrice = (price: number): string => {
   return `$${price.toFixed(4)}`;
 };
 
-export const getKingOfTheHill = (tokens: Token[]): Token => {
-  return tokens.reduce((prev, current) =>
-    prev.marketCap > current.marketCap ? prev : current
-  );
+export const getKingOfTheHill = (tokens: Token[]): Token[] => {
+  return tokens.sort((a, b) => b.marketCap - a.marketCap).slice(0, 3);
 };
 
 export const getChangeColor = (change: number): string => {

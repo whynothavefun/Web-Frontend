@@ -10,9 +10,14 @@ import { formatNumber, formatPrice, getChangeColor } from '@/utils/tokenUtils';
 interface TokenCardProps {
   token: Token;
   isKing?: boolean;
+  rank?: number;
 }
 
-const TokenCard: React.FC<TokenCardProps> = ({ token, isKing = false }) => {
+const TokenCard: React.FC<TokenCardProps> = ({
+  token,
+  isKing = false,
+  rank,
+}) => {
   const navigate = useNavigate();
 
   const getTrendIcon = (trend: 'up' | 'down' | 'stable') => {
@@ -24,6 +29,19 @@ const TokenCard: React.FC<TokenCardProps> = ({ token, isKing = false }) => {
       case 'stable':
         return <Minus className="h-4 w-4 text-gray-500" />;
     }
+  };
+
+  const getRankBadge = (rank: number) => {
+    const emojis = ['🥇', '🥈', '🥉'];
+    const colors = ['bg-yellow-500', 'bg-gray-400', 'bg-orange-500'];
+    return (
+      <Badge
+        variant="default"
+        className={`${colors[rank - 1]} text-black hover:${colors[rank - 1]}`}
+      >
+        {emojis[rank - 1]} #{rank}
+      </Badge>
+    );
   };
 
   const handleCardClick = () => {
@@ -50,14 +68,16 @@ const TokenCard: React.FC<TokenCardProps> = ({ token, isKing = false }) => {
               <p className="text-sm text-gray-600">{token.symbol}</p>
             </div>
           </div>
-          {isKing && (
+          {isKing && rank && rank <= 3 ? (
+            getRankBadge(rank)
+          ) : isKing ? (
             <Badge
               variant="default"
               className="bg-yellow-500 text-black hover:bg-yellow-600"
             >
               👑 KING
             </Badge>
-          )}
+          ) : null}
         </div>
       </CardHeader>
       <CardContent className="space-y-3">

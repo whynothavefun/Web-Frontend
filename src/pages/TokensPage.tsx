@@ -20,7 +20,7 @@ const TokensPage: React.FC = () => {
 
   return (
     <div className="mx-auto max-w-7xl px-4">
-      <KingOfTheHill kingToken={kingOfTheHill} />
+      <KingOfTheHill topTokens={kingOfTheHill} />
 
       <TokenFilters
         searchTerm={searchTerm}
