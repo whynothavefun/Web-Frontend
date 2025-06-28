@@ -1,6 +1,6 @@
 import React from 'react';
 import { Token } from '@/lib/types';
-import TokenCard from './TokenCard';
+import TokenCard from '@/components/Tokens/TokenCard';
 
 interface KingOfTheHillProps {
   kingToken: Token;

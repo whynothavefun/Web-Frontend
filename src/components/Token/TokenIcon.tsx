@@ -13,7 +13,6 @@ const TokenIcon: React.FC<TokenIconProps> = ({
 }) => {
   const initials = symbol.slice(0, 2).toUpperCase();
 
-  // Генерируем цвет на основе символа токена
   const colors = [
     '#3B82F6', // blue
     '#10B981', // green
